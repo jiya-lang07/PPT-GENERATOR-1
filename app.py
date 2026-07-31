@@ -13,27 +13,27 @@ import streamlit as st
 
 #================== STEP 2 Streamlit front-end==========
 # to show web-app:complete page layout
-St.set_page_config(layout=”wide”)
+St.set_page_config(layout="wide")
 
-St.title(“AI PPT GENERATOR”)
+St.title("AI PPT GENERATOR")
 St.divider()
-St.sidebar.title(“Enter API-KEYS”)
+St.sidebar.title("Enter API-KEYS")
 
 #===================STEP 3 load API-keys==================
-GOOGLE_API_KEY = st.sidebar.text_input(“google-API”, type = “password)
-TAVILY_API_KEY = st.sidebar.text_input(“TAVILY-API”, type = “password)
+GOOGLE_API_KEY = st.sidebar.text_input("google-API", type = "password)"
+TAVILY_API_KEY = st.sidebar.text_input("TAVILY-API", type = "password")
 
 #==================API VALIDATIONS====================
 ALL_API = [GOOGLE_API_KEY, TAVILY_API_KEY]
 if not all(ALL_API):
-  st.sidebar.error(“MUST PASS ALL API-KEYS”)
+  st.sidebar.error("MUST PASS ALL API-KEYS")
   
 elif all(ALL_API):
-  st.sidebar.success(“API-KEYS LOADED SUCCESSFULLY”)
+  st.sidebar.success("API-KEYS LOADED SUCCESSFULLY")
   # MODEL LOAD
   Model = ChatGoogleGenerativeAI(
     Google_api_key = GOOGLE_API_KEY,
-    Model = st.sidebar.selectbox(“Gemini-Model-Name”,
+    Model = st.sidebar.selectbox("Gemini-Model-Name",
                                  options = ["gemini-2.5-flash",
                                             "gemini-2.5-flash-lite",
                                             "gemini-3.5-flash",
