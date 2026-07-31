@@ -20,7 +20,7 @@ St.divider()
 St.sidebar.title("Enter API-KEYS")
 
 #===================STEP 3 load API-keys==================
-GOOGLE_API_KEY = st.sidebar.text_input("google-API", type = "password)"
+GOOGLE_API_KEY = st.sidebar.text_input("google-API", type = "password")
 TAVILY_API_KEY = st.sidebar.text_input("TAVILY-API", type = "password")
 
 #==================API VALIDATIONS====================
