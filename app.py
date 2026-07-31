@@ -157,8 +157,8 @@ if (user_input) and (leader_agent):
                           data = code,
                           file_name = 'ppt.html',
                           mime = 'text/html')
-          except Exception as err:
-            st.error(err)
+        except Exception as err:
+          st.error(err)
 else:
   st.error("something went wrong")
             
